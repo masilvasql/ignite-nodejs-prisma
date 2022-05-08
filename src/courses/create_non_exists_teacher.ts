@@ -5,17 +5,12 @@ const prisma = new PrismaClient();
 async function main(){
   const result = await prisma.courses.create({
     data:{
-      name:"SQL",
-      duration:150,
-      description: "SQL",
+      name:"Curso de Elixir",
+      duration:200,
+      description: "Curso de Elixir",
       teacher:{
-        connectOrCreate:{
-          where:{
-            name:"Joice Pépe"
-          },
-          create:{
-            name:"Joice Pépe"
-          }
+        create:{
+            name:"Rafa Camarda"
         }
       }
     }
